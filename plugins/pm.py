@@ -30,8 +30,10 @@ async def pm_sticker(bot, message):
     if message.from_user.id == Config.ADMIN:
         await bot.send_message(
             chat_id=int(message.chat.id),
-            message
+            message_id=message.message_id
         )
+        return
+
         info = await bot.get_users(user_ids=message.from_user.id)
         reference_id = int(message.chat.id)
         await bot.send_message(
@@ -41,7 +43,7 @@ async def pm_sticker(bot, message):
         )
         await bot.send_message(
             chat_id=Config.ADMIN,
-            message
+            message_id=message.message_id
         )
 
 @Client.on_message(filters.private & filters.animation)
@@ -50,8 +52,10 @@ async def pm_animation(bot, message):
     if message.from_user.id == Config.ADMIN:
         await bot.send_message(
             chat_id=int(message.chat.id),
-            message
+            message_id=message.message_id
         )
+        return
+
         info = await bot.get_users(user_ids=message.from_user.id)
         reference_id = int(message.chat.id)
         await bot.send_message(
@@ -61,7 +65,7 @@ async def pm_animation(bot, message):
         )
         await bot.send_message(
             chat_id=Config.ADMIN,
-            message
+            message_id=message.message_id
         )
         
 @Client.on_message(filters.private & filters.media)
