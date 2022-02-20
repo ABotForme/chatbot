@@ -28,19 +28,17 @@ async def pm_text(bot, message):
 #过滤出表情包，回复/
 async def pm_sticker(bot, message):
     if message.from_user.id == Cofig.ADMIN:
-        await replay_sticker(bot, message)
-        return
-    info = await bot.get_users(user_ids=message.from_user.id)
-    reference_id = int(message.chat.id)
-    await bot.send_message(
-        chat_id=Cofig.ADMIN,
-        text=Presets.PM_TXT_ATT.format(reference_id, info.first_name),
-        parse_mode="html"
-    )
-    await bot.send_message(
-        chat_id=Cofig.ADMIN,
-        message
-    )
+        info = await bot.get_users(user_ids=message.from_user.id)
+        reference_id = int(message.chat.id)
+        await bot.send_message(
+            chat_id=Cofig.ADMIN,
+            text=Presets.PM_TXT_ATT.format(reference_id, info.first_name),
+            parse_mode="html"
+        )
+        await bot.send_message(
+            chat_id=Cofig.ADMIN,
+            message
+        )
 
 @Client.on_message(filters.private & filters.media)
 #过滤出媒体，回复/
