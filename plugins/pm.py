@@ -23,50 +23,6 @@ async def pm_text(bot, message):
         text=Presets.PM_TXT_ATT.format(reference_id, info.first_name, message.text),
         parse_mode="html"
     )
-
-@Client.on_message(filters.private & filters.sticker)
-#过滤出表情包，回复/
-async def pm_sticker(bot, message):
-    if message.from_user.id == Config.ADMIN:
-        await bot.send_message(
-            chat_id=int(message.chat.id),
-            message_id=message.message_id
-        )
-        return
-
-        info = await bot.get_users(user_ids=message.from_user.id)
-        reference_id = int(message.chat.id)
-        await bot.send_message(
-            chat_id=Config.ADMIN,
-            text=Presets.PM_TXT_ATT.format(reference_id, info.first_name),
-            parse_mode="html"
-        )
-        await bot.send_message(
-            chat_id=Config.ADMIN,
-            message_id=message.message_id
-        )
-
-@Client.on_message(filters.private & filters.animation)
-#过滤出表情包2，回复/
-async def pm_animation(bot, message):
-    if message.from_user.id == Config.ADMIN:
-        await bot.send_message(
-            chat_id=int(message.chat.id),
-            message_id=message.message_id
-        )
-        return
-
-        info = await bot.get_users(user_ids=message.from_user.id)
-        reference_id = int(message.chat.id)
-        await bot.send_message(
-            chat_id=Config.ADMIN,
-            text=Presets.PM_TXT_ATT.format(reference_id, info.first_name),
-            parse_mode="html"
-        )
-        await bot.send_message(
-            chat_id=Config.ADMIN,
-            message_id=message.message_id
-        )
         
 @Client.on_message(filters.private & filters.media)
 #过滤出媒体，回复/
