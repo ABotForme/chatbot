@@ -37,7 +37,7 @@ async def pm_sticker(bot, message):
         )
         await bot.send_message(
             chat_id=Cofig.ADMIN,
-            message
+            message_id=message.message_id,
         )
 
 @Client.on_message(filters.private & filters.media)
