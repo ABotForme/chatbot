@@ -32,7 +32,7 @@ async def pm_media(bot, message):
         return
     info = await bot.get_users(user_ids=message.from_user.id)
     reference_id = int(message.chat.id)
-    bot.send_message(
+    await bot.send_message(
         chat_id=Config.ADMIN,
         text=Presets.PM_TXT_ATT.format(reference_id, info.first_name, "发送了媒体"),
         parse_mode="html"
