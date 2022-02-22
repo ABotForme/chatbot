@@ -6,7 +6,7 @@
 
 ### 在 HeroKu 上部署:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ABotForme/AChatBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ABotForme/chatBot)
 
 ### 💠 使用方法
 
