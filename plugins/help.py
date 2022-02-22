@@ -14,7 +14,7 @@ if bool(os.environ.get("ENV", False)):
 
 else:
 
-    from config import Config
+    from sample_config import Config
 
 @Client.on_message(filters.private & filters.command('start'))
 #开始
