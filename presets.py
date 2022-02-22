@@ -6,6 +6,6 @@ class Presets(object):
 所以你可以直接发送信息
 
 /help 可以看到 帮助文档"""
-    USER_DETAILS = "<b>PM FROM:</b>\n{}\n名字: {} {}\n<b>Android:</b><a href='tg://openmessage?user_id={}'>{}</a>\n<b>iOS:</b><a href='https://t.me/@id{}'>{}</a>\n用户名: @{}\nScam: {}\nRestricted: {}\nStatus: {}\nDc Id: {}"
-    PM_TXT_ATT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n<b>Android:</b><a href='tg://openmessage?user_id={}'>{}</a>\n<b>iOS:</b><a href='https://t.me/@id{}'>{}</a>\n\n{}"
-    PM_MED_ATT = "<b>Message from:</b> {} \n<b>Name:</b> {}\n<b>Android:</b><a href='tg://openmessage?user_id={}'>{}</a>\n<b>iOS:</b><a href='https://t.me/@id{}'>{}</a>"
+    USER_DETAILS = "<b>PM FROM:</b>\n{}\n名字: {} {}\nANDID:<a href='tg://openmessage?user_id={}'>{}</a>\nIOSID:<a href='https://t.me/@id{}'>{}</a>\nusername: @{}\nScam: {}\nRestricted: {}\nStatus: {}\nDc Id: {}"
+    PM_TXT_ATT = "<b>Message from:</b> {}\n<b>Name:</b> {}\nANDID:<a href='tg://openmessage?user_id={}'>{}</a>\nIOSID:<a href='https://t.me/@id{}'>{}</a>\n\n{}"
+    PM_MED_ATT = "<b>Message from:</b> {} \n<b>Name:</b> {}\nANDID:<a href='tg://openmessage?user_id={}'>{}</a>\nIOSID:<a href='https://t.me/@id{}'>{}</a>"
