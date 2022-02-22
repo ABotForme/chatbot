@@ -31,7 +31,7 @@ async def start_me(bot, message):
 
 ##        text="您点击了开始，请从这里发送信息以联系 @vodkaHeb 吧！"
         
-        text=Presets.WELCOME_TEXT.format(update.from_user.first_name),
+        text=Presets.WELCOME_TEXT.format(message.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
