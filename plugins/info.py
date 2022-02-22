@@ -1,4 +1,4 @@
-#-------------------------------------- https://github.com/Pradeepnagal ------------------------------------------#
+#-------------------------------------- https://github.com/ABotForme ------------------------------------------#
 import os
 
 from pyrogram import Client, filters
@@ -34,9 +34,5 @@ async def user_info(bot, message):
             info.last_name,
             info.id,info.id,info.id,info.id,
             info.username,
-            info.is_scam,
-            info.is_restricted,
-            info.status,
-            info.dc_id
         )
     )

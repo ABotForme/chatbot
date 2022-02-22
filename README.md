@@ -1,25 +1,23 @@
-# 🤖 Chat Bot 🤖
-A Simple Bot that can be used as a personal assistant for managing Personal Messages.
+# 🤖 聊天机器人 🤖
+一个简单的机器人，可用作管理个人消息的个人助理。
 
-### 💠 HELP
-In the busy schedules of Noobs, it can't accept receiving Personal messages from unwanted or unnecessary
-users all time. This bot is a solution for the problem. All the personal messages can be managed through
-this bot, and our personal chat will be safe and clean.
+### 💠 帮助
+在繁忙的日程中，我们不能一直接收来自不需要或者是不必要的用户个人信息。这个机器人是该问题的解决方案。所有的个人信息都可以通过这个机器人进行管理，我们的个人聊天将会是安全和干净的。
 
-### Deploying on Heroku:
+### 在 HeroKu 上部署:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ABotForme/chatbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ABotForme/AChatBot)
 
-### 💠 USAGE
+### 💠 使用方法
 
-- Users can pm to the bot via text or media messages.
-- Bot will send the message to the admin user id as pm.
-- Admin need to reply as **reply to the message** received in the bot (Text & Media)
-- The replied message will be sent to the user as pm in the bot.
-- Command ```/info``` as a reply to any chat received will give the basic info about the Pm user.(Admin Only)
+- 用户可以通过信息或者媒体消息向机器人发送消息
+- 机器人会将消息作为 PM 发送给管理员用户ID
+- 管理员需要回复机器人中收到的 消息（文本和媒体）
+- 回复的消息将在机器人中作为 PM 发送给用户
+- 命令 ```/info``` 作为对收到的任何聊天的回复将提供有关 PM 用户的基本信息(仅限管理员)
 
 
-### 💠 Bot Commands 
+### 💠 机器人命令 
 
 ```
 # User Commmands
@@ -37,3 +35,5 @@ ADMIN - Admin User Id.
 ```
 ### 💠 Credits
 [Pradeep Nagal](https://t.me/fojipk) for his [Pyrogram](https://github.com/pyrogram/pyrogram) Library
+
+[Vodka Heb](https://t.me/VodkaHeb) for his [chatbot](https://github.com/ABotForme/chatbot) Library

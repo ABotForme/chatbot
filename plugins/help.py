@@ -1,4 +1,4 @@
-#-------------------------------------- https://github.com/Pradeepnagal ------------------------------------------#
+#-------------------------------------- https://github.com/ABotForme ------------------------------------------#
 
 import os
 
@@ -25,24 +25,25 @@ async def start_me(bot, message):
 
   #      return
 
-    info = await bot.get_users(user_ids=message.from_user.id)
+    info = await bot.get_users(user_ids=message.from_user.id,Config.ADMIN)
+    geturl = Presets.URL.format(Config.ADMIN)
 
     await bot.send_message(
 
         chat_id=message.chat.id,
 
-##        text="您点击了开始，请从这里发送信息以联系 @vodkaHeb 吧！"
+##        text="您点击了开始，请从这里发送信息以联系 XXX 吧！"
         
         text=Presets.WELCOME_TEXT.format(message.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "三郎百宝箱", url="https://t.me/MySecretWarehouse"
+                        "设置中文", url="https://t.me/setlanguage/zhcncc"
                     ),
                     InlineKeyboardButton("秘密藏宝箱", url="https://t.me/TTreasures"),
                 ],
-                [InlineKeyboardButton("联系作者", url="https://t.me/VodkaHeb")],
+                [InlineKeyboardButton("联系作者", geturl)],
             ]
         ),
         reply_to_message_id=message.message_id
@@ -62,25 +63,10 @@ async def start_me(bot, message):
             info.id,info.id,info.id,info.id,
 
             info.username,
-
-            info.is_scam,
-
-            info.is_restricted,
-
-            info.status,
-
-            info.dc_id
-
         )
 
     )
-   # await bot.send_message(
 
-   #     chat_id=Config.ADMIN,
-
-   #     text="点击了开始"
-
-   # )
 
 @Client.on_message(filters.private & filters.command('help'))
 #帮助
@@ -92,13 +78,25 @@ async def help_me(bot, message):
   #      return
 
     info = await bot.get_users(user_ids=message.from_user.id)
+    geturl = Presets.URL.format(Config.ADMIN)
 
     await bot.send_message(
 
         chat_id=message.chat.id,
 
-        text="他还没设置帮助文档，请自己摸索！"
-
+        text="他还没设置帮助文档，请自己摸索！",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "三郎百宝箱", url="https://t.me/MySecretWarehouse"
+                    ),
+                    InlineKeyboardButton("设置中文", url="https://t.me/setlanguage/zhcncc"),
+                ],
+                [InlineKeyboardButton("联系作者", geturl)],
+            ]
+        ),
+        reply_to_message_id=message.message_id
     )
 
     await bot.send_message(
@@ -115,22 +113,6 @@ async def help_me(bot, message):
             info.id,info.id,info.id,info.id,
 
             info.username,
-
-            info.is_scam,
-
-            info.is_restricted,
-
-            info.status,
-
-            info.dc_id
-
         )
 
     )
-  #  await bot.send_message(
-
-  #      chat_id=Config.ADMIN,
-
-   #     text="点击了帮助"
-
-   # )

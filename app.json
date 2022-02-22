@@ -2,14 +2,14 @@
   "name": "chatbot",
   "description": "Personal Message Chatting robot. Create your fork now",
   "keywords": ["telegram", "pm", "chat", "bot", "open", "source"],
-  "website": "https://github.com/Pradeepnagal",
-  "repository": "https://github.com/Pradeepnagal/chatbot",
+  "website": "https://github.com/ABotForme",
+  "repository": "https://github.com/ABotForme/chatbot",
   "env": {
-        "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
-        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
-        "TG_BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true},
-        "ADMIN": {"description": "Admin user ID for incoming queries","required": true},
-        "ENV": {"description": "Set this to ANYTHING","value": "ANYTHING"}
+        "APP_ID": {"description": "从 https://my.telegram.org 获取到你的数值", "required": true},
+        "API_HASH": {"description": "从 https://my.telegram.org 获取到你的数值" , "required": true},
+        "TG_BOT_TOKEN": {"description": "从 BotFather Bot 获取你的 BOT TOKEN","required": true},
+        "ADMIN": {"description": "控制机器人账号的管理员 ID","required": true},
+        "ENV": {"description": "把这个设置成 ANYTHING（不要改动）","value": "ANYTHING"}
   },
   "buildpacks": [
     {"url": "heroku/python"}
