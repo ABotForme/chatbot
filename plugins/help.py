@@ -6,6 +6,8 @@ from pyrogram import Client, filters
 
 from presets import Presets
 
+from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
+
 if bool(os.environ.get("ENV", False)):
 
     from sample_config import Config
