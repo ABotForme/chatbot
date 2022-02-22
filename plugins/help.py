@@ -26,7 +26,6 @@ async def start_me(bot, message):
   #      return
 
     info = await bot.get_users(user_ids=message.from_user.id)
-    geturl = Presets.URL.format(Config.ADMIN)
 
     await bot.send_message(
 
@@ -43,7 +42,7 @@ async def start_me(bot, message):
                     ),
                     InlineKeyboardButton("秘密藏宝箱", url="https://t.me/TTreasures"),
                 ],
-                [InlineKeyboardButton("联系作者", geturl)],
+                [InlineKeyboardButton("联系作者", geturl = Presets.URL_TXT.format(Config.ADMIN))],
             ]
         ),
         reply_to_message_id=message.message_id
@@ -78,7 +77,6 @@ async def help_me(bot, message):
   #      return
 
     info = await bot.get_users(user_ids=message.from_user.id)
-    geturl = Presets.URL.format(Config.ADMIN)
 
     await bot.send_message(
 
@@ -93,7 +91,7 @@ async def help_me(bot, message):
                     ),
                     InlineKeyboardButton("设置中文", url="https://t.me/setlanguage/zhcncc"),
                 ],
-                [InlineKeyboardButton("联系作者", geturl)],
+                [InlineKeyboardButton("联系作者", geturl = Presets.URL_TXT.format(Config.ADMIN))],
             ]
         ),
         reply_to_message_id=message.message_id

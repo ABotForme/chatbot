@@ -16,4 +16,4 @@ class Presets(object):
 <b>iOS:</b><a href='https://t.me/@id{}'>{}</a>
 """
     PM_MED_TES = " number {}\n {}\n {}\n"
-    URL = "tg://openmessage?user_id={}"
+    URL_TXT = "tg://openmessage?user_id={}"
