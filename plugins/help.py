@@ -42,7 +42,7 @@ async def start_me(bot, message):
                     ),
                     InlineKeyboardButton("秘密藏宝箱", url="https://t.me/TTreasures"),
                 ],
-                [InlineKeyboardButton("联系作者", geturl = Presets.URL_TXT.format(Config.ADMIN))],
+                [InlineKeyboardButton("联系作者", url = Presets.URL_TXT.format(Config.ADMIN))],
             ]
         ),
         reply_to_message_id=message.message_id
@@ -91,7 +91,7 @@ async def help_me(bot, message):
                     ),
                     InlineKeyboardButton("设置中文", url="https://t.me/setlanguage/zhcncc"),
                 ],
-                [InlineKeyboardButton("联系作者", geturl = Presets.URL_TXT.format(Config.ADMIN))],
+                [InlineKeyboardButton("联系作者", url = Presets.URL_TXT.format(Config.ADMIN))],
             ]
         ),
         reply_to_message_id=message.message_id
