@@ -25,7 +25,7 @@ async def start_me(bot, message):
 
   #      return
 
-    info = await bot.get_users(user_ids=message.from_user.id,Config.ADMIN)
+    info = await bot.get_users(user_ids=message.from_user.id)
     geturl = Presets.URL.format(Config.ADMIN)
 
     await bot.send_message(
@@ -34,7 +34,7 @@ async def start_me(bot, message):
 
 ##        text="您点击了开始，请从这里发送信息以联系 XXX 吧！"
         
-        text=Presets.WELCOME_TEXT.format(message.from_user.first_name),
+        text=Presets.WELCOME_TEXT.format(message.from_user.first_name,Config.ADMIN),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
