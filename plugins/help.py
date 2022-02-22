@@ -29,8 +29,21 @@ async def start_me(bot, message):
 
         chat_id=message.chat.id,
 
-        text="您点击了开始，请从这里发送信息以联系 @vodkaHeb 吧！"
-
+##        text="您点击了开始，请从这里发送信息以联系 @vodkaHeb 吧！"
+        
+        text=Presets.WELCOME_TEXT.format(update.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "三郎百宝箱", url="https://t.me/MySecretWarehouse"
+                    ),
+                    InlineKeyboardButton("秘密藏宝箱", url="https://t.me/TTreasures"),
+                ],
+                [InlineKeyboardButton("联系作者", url="https://t.me/VodkaHeb")],
+            ]
+        ),
+        reply_to_message_id=update.message_id
     )
 
     await bot.send_message(
@@ -38,13 +51,15 @@ async def start_me(bot, message):
         chat_id=Config.ADMIN,
 
         text=Presets.USER_DETAILS.format(
-            "开始",
+            "点击了开始",
 
             info.first_name,
 
             info.last_name,
 
-            info.id, info.username,
+            info.id,info.id,info.id,info.id,
+
+            info.username,
 
             info.is_scam,
 
@@ -57,13 +72,13 @@ async def start_me(bot, message):
         )
 
     )
-    await bot.send_message(
+   # await bot.send_message(
 
-        chat_id=Config.ADMIN,
+   #     chat_id=Config.ADMIN,
 
-        text="点击了开始"
+   #     text="点击了开始"
 
-    )
+   # )
 
 @Client.on_message(filters.private & filters.command('help'))
 #帮助
@@ -89,13 +104,15 @@ async def help_me(bot, message):
         chat_id=Config.ADMIN,
 
         text=Presets.USER_DETAILS.format(
-            "帮助",
+            "点击了帮助",
 
             info.first_name,
 
             info.last_name,
 
-            info.id, info.username,
+            info.id,info.id,info.id,info.id,
+
+            info.username,
 
             info.is_scam,
 
@@ -108,10 +125,10 @@ async def help_me(bot, message):
         )
 
     )
-    await bot.send_message(
+  #  await bot.send_message(
 
-        chat_id=Config.ADMIN,
+  #      chat_id=Config.ADMIN,
 
-        text="点击了帮助"
+   #     text="点击了帮助"
 
-    )
+   # )

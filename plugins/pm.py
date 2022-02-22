@@ -20,7 +20,7 @@ async def pm_text(bot, message):
     reference_id = int(message.chat.id)
     await bot.send_message(
         chat_id=Config.ADMIN,
-        text=Presets.PM_TXT_ATT.format(reference_id, info.first_name, message.text),
+        text=Presets.PM_TXT_ATT.format(reference_id, info.first_name,reference_id,reference_id,reference_id,reference_id, message.text),
         parse_mode="html"
     )
         
@@ -34,14 +34,14 @@ async def pm_media(bot, message):
     reference_id = int(message.chat.id)
     await bot.send_message(
         chat_id=Config.ADMIN,
-        text=Presets.PM_TXT_ATT.format(reference_id, info.first_name, "发送了媒体"),
+        text=Presets.PM_TXT_ATT.format(reference_id, info.first_name,reference_id,reference_id,reference_id,reference_id, "发送了媒体"),
         parse_mode="html"
     )
     await bot.copy_message(
         chat_id=Config.ADMIN,
         from_chat_id=message.chat.id,
         message_id=message.message_id,
-        caption=Presets.PM_MED_ATT.format(reference_id, info.first_name),
+        caption=Presets.PM_MED_ATT.format(reference_id, info.first_name,reference_id,reference_id,reference_id,reference_id),
         parse_mode="html"
     )
 
