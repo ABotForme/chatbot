@@ -45,7 +45,7 @@ async def start_me(bot, message):
                 [InlineKeyboardButton("联系作者", url="https://t.me/VodkaHeb")],
             ]
         ),
-        reply_to_message_id=update.message_id
+        reply_to_message_id=message.message_id
     )
 
     await bot.send_message(
