@@ -38,11 +38,15 @@ async def start_me(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        "设置中文", url="https://t.me/setlanguage/zhcncc"
+                        "三郎百宝箱", url="https://t.me/MySecretWarehouse"
                     ),
                     InlineKeyboardButton("秘密藏宝箱", url="https://t.me/TTreasures"),
                 ],
-                [InlineKeyboardButton("联系作者", url = Presets.URL_TXT.format(Config.ADMIN))],
+                [
+                    InlineKeyboardButton(
+                        "设置中文", url="https://t.me/setlanguage/zhcncc"
+                    ),
+                    InlineKeyboardButton("联系作者", url = Presets.URL_TXT.format(Config.ADMIN))],
             ]
         ),
         reply_to_message_id=message.message_id
@@ -89,9 +93,13 @@ async def help_me(bot, message):
                     InlineKeyboardButton(
                         "三郎百宝箱", url="https://t.me/MySecretWarehouse"
                     ),
-                    InlineKeyboardButton("设置中文", url="https://t.me/setlanguage/zhcncc"),
+                    InlineKeyboardButton("秘密藏宝箱", url="https://t.me/TTreasures"),
                 ],
-                [InlineKeyboardButton("联系作者", url = Presets.URL_TXT.format(Config.ADMIN))],
+                [
+                    InlineKeyboardButton(
+                        "设置中文", url="https://t.me/setlanguage/zhcncc"
+                    ),
+                    InlineKeyboardButton("联系作者", url = Presets.URL_TXT.format(Config.ADMIN))],
             ]
         ),
         reply_to_message_id=message.message_id
