@@ -2,7 +2,7 @@
 class Presets(object):
     WELCOME_TEXT = """你好！ {},
 我是聊天机器人！
-你所发的内容我都会转发给 <a href='tg://openmessage?user_id={}'>作者</a>
+你所发的内容我都会转发给 <a href='tg://openmessage?user_id={}'>徐坤 蔡</a>
 所以你可以直接发送信息
 
 /help 可以看到 帮助文档"""
